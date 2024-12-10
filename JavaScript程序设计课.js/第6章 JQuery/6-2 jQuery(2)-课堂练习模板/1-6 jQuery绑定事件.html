@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<style>
+			div {
+				width: 300px;
+				height: 200px;
+				background-color: skyblue;
+			}
+		</style>
+
+		<script src="./js/jquery-3.5.1.min.js"></script>
+		<script>
+			$(function() {
+				// $(document).ready(function(){
+				//1.通过事件方法绑定事件
+				/*
+				$('div').click(function() {
+					$(this).css('background-color', 'orange');
+				});
+
+				$('div').mouseover(function() {
+					$(this).css('background-color', 'pink');
+				})
+
+				$('div').mouseout(function() {
+					$(this).css('background-color', 'skyblue');
+				})
+				*/
+
+				//2.通过to方法绑定事件
+
+				/*
+				$('div').on("click", function() {
+					$(this).css('background-color', 'orange');
+				});
+
+				$('div').on('mouseover', function() {
+					$(this).css('background-color', 'pink');
+				})
+
+				$('div').on('mouseout', function() {
+					$(this).css('background-color', 'skyblue');
+				})
+				*/
+
+				//2.1 	一次绑定多个事件 (执行相同事件处理程序)
+
+				$('div').on("click dblclick", function() {
+					$(this).css('background-color', 'orange');
+				});
+				//2.2 	一次绑定多个事件 (执行相同事件处理程序)
+				$('div').on({
+					click: function() {
+						$(this).css('background-color', 'orange');
+					}
+					mouseover: function() {
+						$(this).css('background-color', 'pink');
+					}
+					mouseout: function() {
+						$(this).css('background-color', 'skyblue');
+					}
+				});
+			});
+		</script>
+
+	</head>
+
+	<body>
+		<div></div>
+	</body>
+</html>

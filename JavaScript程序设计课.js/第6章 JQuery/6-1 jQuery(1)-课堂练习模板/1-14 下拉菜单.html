@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+
+			li {
+				list-style-type: none;
+			}
+
+			a {
+				text-decoration: none;
+				font-size: 14px;
+			}
+
+			.nav {
+				margin: 50px;
+			}
+
+			.nav>li {
+				position: relative;
+				float: left;
+				width: 80px;
+				height: 41px;
+				text-align: center;
+			}
+
+			.nav li a {
+				display: block;
+				width: 100%;
+				height: 100%;
+				line-height: 41px;
+				color: #333;
+			}
+
+			.nav>li>a:hover {
+				background-color: #eee;
+			}
+
+			.nav ul {
+				display: none;
+				position: absolute;
+				top: 41px;
+				left: 0;
+				width: 100%;
+				border-left: 1px solid #FECC5B;
+				border-right: 1px solid #FECC5B;
+			}
+
+			.nav ul li {
+				border-bottom: 1px solid #FECC5B;
+			}
+
+			.nav ul li a:hover {
+				background-color: #FFF5DA;
+			}
+		</style>
+
+		<script src="./js/jquery-3.5.1.min.js"></script>
+
+		<script>
+			$(function() {
+				/*
+				$(document).ready(function() {
+					// ready () 函数用于 在当前文档结构载入完毕后立即执行指定的函数
+					// ready() 函数规定当 ready 事件发生时执行的代码
+					// ready() 函数仅能用于当前文档，因此无需选择器
+					$(".nav li").mouseenter(function() {
+						$(this).children("ul").show();
+					});
+					$(".nav li").mouseleave(function() {
+						$(this).children("ul").hide();
+					});
+				});
+				*/
+
+
+				// $(document).ready(function () {
+				//     $(".nav li").hover(function () {
+				//         $(this).children("ul").show();
+				//     },function () {
+				//         $(this).children("ul").hide();
+				//     });
+				// });
+
+				$(".nav>li").hover(function() {
+					$(this).children("ul").toggle();
+					// $(this).children("ul").slideToggle(800);
+				});
+
+			})
+		</script>
+
+	</head>
+
+	<body>
+		<ul class="nav">
+			<li>
+				<a href="#">微博</a>
+				<ul>
+					<li>
+						<a href="">私信</a>
+					</li>
+					<li>
+						<a href="">评论</a>
+					</li>
+					<li>
+						<a href="">@我</a>
+					</li>
+				</ul>
+			</li>
+
+			<li>
+				<a href="#">留言板</a>
+				<ul>
+					<li>
+						<a href="">发布留言</a>
+					</li>
+					<li>
+						<a href="">查看留言</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">电话</a>
+				<ul>
+					<li>
+						<a href="">投诉电话</a>
+					</li>
+					<li>
+						<a href="">客服电话</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">邮箱</a>
+				<ul>
+					<li>
+						<a href="">企业邮箱</a>
+					</li>
+					<li>
+						<a href="">客服邮箱</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</body>
+</html>

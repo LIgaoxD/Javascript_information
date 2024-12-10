@@ -1,0 +1,49 @@
+<!-- 使用两种方式实现排他思想 -->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+
+		<script src="js/jquery-3.5.1.min.js"></script>
+
+		<script>
+			/*
+		        $(function () {
+		            $('button').click(function () {
+		                $(this).css('background', 'pink');
+		                $(this).siblings('button').css('background', '');
+		            })
+		        })
+			*/
+
+			// 1. 获取所有按钮元素
+			window.onload = function() {
+				var btns = document.querySelectorAll('button');
+				// btns得到的是伪数组  里面的每一个元素 btns[i]
+				for (var i = 0; i < btns.length; i++) {
+					btns[i].addEventListener('click', function() {
+						// (1) 我们先把所有的按钮背景颜色去掉  干掉所有人
+						for (var i = 0; i < btns.length; i++) {
+							btns[i].style.backgroundColor = '';
+						}
+						// (2) 然后才让当前的元素背景颜色为pink 留下我自己
+						this.style.backgroundColor = 'pink';
+
+					});
+				}
+			}
+			//2. 首先先排除其他人，然后才设置自己的样式 这种排除其他人的思想我们成为排他思想
+		</script>
+
+
+	</head>
+	<body>
+		<button>按钮1</button>
+		<button>按钮2</button>
+		<button>按钮3</button>
+		<button>按钮4</button>
+		<button>按钮5</button>
+	</body>
+</html>

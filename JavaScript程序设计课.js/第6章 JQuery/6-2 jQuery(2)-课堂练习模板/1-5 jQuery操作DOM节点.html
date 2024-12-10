@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			.intro {
+				color: red;
+			}
+		</style>
+
+		<script src="./js/jquery-3.5.1.min.js"></script>
+		<script>
+			$(function() {
+				//添加元素
+				$('button').eq(0).click(function() {
+					var newLi1 = $("<li>列表8</li>");
+					//$('ul').append(newLi1);
+					// $(newLi1).appendTo('ul');
+					$('li:last').after(newLi1)
+
+					var newLi2 = $("<li></li>");
+					newLi2.text('列表0')
+					// $('ul').prepend(newLi2);
+					// $(newLi2).appendTo('ul');
+					$('li:first').before(newLi2)
+
+					var newLi3 = $("<li>列表WW</li>");
+					$('li.intro').after(newLi3);
+				});
+				//改变位置
+				$('button').eq(1).click(function() {
+					// $('li:last').insertBefore('li:first');
+					// $('li:eq(1)').insertAfter('li:last');
+
+					$('li:last').insertAfter('li:first');
+					$('li:first').insertAfter('li:last');
+				})
+				//删除元素
+				$('button').eq(2).click(function() {
+					// $('li:intro').empty();
+					$('li.intro').remove();
+				});
+			});
+		</script>
+
+	</head>
+	<body>
+		<ul>
+			<li>列表1</li>
+			<li>列表2</li>
+			<li class="intro">列表3</li>
+			<li>列表4</li>
+			<li>列表5</li>
+			<li>列表6</li>
+			<li>列表7</li>
+		</ul>
+		<button>添加元素</button>&nbsp;<button>改变元素位置</button>&nbsp;<button>删除元素</button>
+	</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+
+		<script src="./js/jquery-3.5.1.min.js"></script>
+		<script>
+			$(function() {
+
+				$('ul').on('click', 'li', function() {
+					alert($(this).text())
+				})
+
+				$('ul').on('click', function() {
+					alert($(this).text())
+				})
+
+				$('li').on('click', function() {
+					alert($(this).text())
+				})
+
+				$('button').click(function() {
+					var li = $('<li>我是北北的女朋友</li>')
+
+				})
+
+			})
+		</script>
+
+	</head>
+
+	<body>
+		<ul>
+			<li>我是第1个li</li>
+			<li>我是第2个li</li>
+			<li>我是第3个li</li>
+		</ul>
+		<button>添加列表项</button>
+	</body>
+</html>

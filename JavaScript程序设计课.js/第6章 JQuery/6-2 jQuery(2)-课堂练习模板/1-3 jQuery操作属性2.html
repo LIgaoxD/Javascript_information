@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+
+		<script src="./js/jquery-3.5.1.min.js"></script>
+		<script>
+			$(function() {
+				
+				$('button').eq(0).click(function() {
+					// $('a').attr('sName','北北');
+					// $('a').attr('age','19');
+
+					$('a').data('sName', '北北');
+					$('a').data('age', '19');
+				})
+				$('button').eq(1).click(function() {
+					// console.log($('a').attr('sName'));
+					// console.log($('a').attr('age'));
+
+					console.log($('a').data('sName'));
+					console.log($('a').data('age'));
+
+				});
+
+			});
+		</script>
+
+	</head>
+	<body>
+		<a href="http://www.ccit.js.cn" data-index=1>常州信息职业技术学院</a><br />
+		<button>设置数据</button>&nbsp;<button>获取数据</button>
+	</body>
+</html>

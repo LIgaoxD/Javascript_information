@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+	//转化成字符串	
+			var num = 18;
+			//1.	变量.toString
+			var str = num.toString();
+			console.log(str);
+			console.log(typeof(str));
+
+			//2. 利用 string()
+			console.log(String(num));
+			//3.  *****加号	拼接字符串的方法  比较好的
+			console.log(num + '');
+
+	//转化成数字型	字符串开头必须为数字
+			//1. *****parseInt(变量)  取整 得到的是整数	会去掉单位
+			var str = prompt('请输入你的年龄！');
+			console.log(parseInt(str));
+			console.log(parseInt('3.1415')); //3
+			console.log(parseInt('120px')); //120
+			console.log(parseInt('re120px')); //NaN
+			//2. parseFloat(变量)	得到的是浮点数	会去掉单位
+			console.log(parseFloat('3.14'));
+			console.log(parseFloat('120px'));
+			console.log(parseFloat('re120px')); //NaN
+			//3. Number(变量)强制转化
+			var num = '123';
+			console.log(Number(num));
+			console.log(Number('12'));
+			//4. 利用算数运算  - * /
+			console.log('123' - 3);
+			console.log('123' - '23');
+			console.log('123' * 1);
+			
+	//转化成布尔型
+			console.log(Boolean('')); //false
+			console.log(Boolean(0)); //false
+			console.log(Boolean(NaN)); //false
+			console.log(Boolean(null)); //false
+			console.log(Boolean(undefined)); //false    只有五种情况false
+			console.log(Boolean('清风倩影'));
+			console.log(Boolean(12));
+		
+		</script>
+
+	</body>
+</html>

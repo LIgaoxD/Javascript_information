@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/jquery-3.5.1.min.js"></script>
+		<style>
+			div {
+				width: 200px;
+				height: 200px;
+				background-color: pink;
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+		<button>隐藏</button>
+
+		<script>
+			$(function() {
+				$('button').click(function() {
+					// $("div").css('display','none');	
+					// $('div').css({display:'none'});
+					// $("div").hide();
+					$(div).css('display', 'block');
+				})
+			})
+		</script>
+	</body>
+</html>

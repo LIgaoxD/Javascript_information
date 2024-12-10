@@ -1,0 +1,51 @@
+﻿<!doctype html>
+<html>
+	<head>
+		<title>文本框获得焦点时改变背景颜色</title>
+	</head>
+
+	<body>
+		<form name="form1" method="post" action="">
+			<table align="center" width="337" height="204" border="0">
+				<tr>
+					<td width="108">用户名:</td>
+					<td width="213"><input type="text" /></td>
+				</tr>
+				<tr>
+					<td>密码:</td>
+					<td><input type="password" /></td>
+				</tr>
+				<tr>
+					<td>确认密码:</td>
+					<td><input type="password" /></td>
+				</tr>
+				<tr>
+					<td>真实姓名:</td>
+					<td><input type="text" /></td>
+				</tr>
+				<tr>
+					<td>性别:</td>
+					<td><input type="text" /></td>
+				</tr>
+				<tr>
+					<td>邮箱:</td>
+					<td><input type="text" /></td>
+				</tr>
+				<tr>
+					<td><input type="submit" value="提交"></td>
+					<td><input type="reset" value="重置"></td>
+				</tr>
+			</table>
+		</form>
+	</body>
+	<script src="./js/jquery-3.3.1.min.js"></script>
+	<script>
+		$(":password,:text").focus(function() {
+			$(this).css("background-color", "#FFFF66");
+		});
+		
+		$(":password,:text").blur(function() {
+			$(this).css("background-color", "");
+		});
+	</script>
+</html>

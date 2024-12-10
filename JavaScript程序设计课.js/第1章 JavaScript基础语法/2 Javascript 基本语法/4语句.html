@@ -1,0 +1,53 @@
+JavaScript 语句
+JavaScript 语句是发给浏览器的命令,这些命令的作用是告诉浏览器要做的事情。
+
+分号用于分隔 JavaScript 语句,通常我们在每条可执行的语句结尾添加分号。
+可以在文本字符串中使用(反斜杠)\对代码行进行换行
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>北北</title>
+	</head>
+	<body>
+
+		<h1>我的 Web 页面</h1>
+		<p id="myPar">我是一个段落。</p>
+		<div id="myDiv">我是一个div。</div>
+		<p>
+			<button type="button" onclick="myFunction()">点击这里</button>
+		</p>
+		<script>
+			function myFunction() {
+				document.getElementById("myPar").innerHTML = "你好世界！";
+				document.getElementById("myDiv").innerHTML = "你最近怎么样?";
+			}
+		</script>
+		<p>当您点击上面的按钮时，两个元素会改变。</p>
+
+	</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var username = prompt("请输入用户名");
+			var password = prompt("请输入密码");
+			console.Log("username");
+
+			if (username === 'Admin' & password === '888888') {
+				document.write("登陆成功，北北！")
+			} else {
+				document.write("用户名或密码错误 *！*！")
+			}
+		</script>
+	</body>
+</html>

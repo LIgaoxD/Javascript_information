@@ -1,0 +1,56 @@
+使用 alert() 弹出警告框,输出的 展示给用户的。
+使用 prompt() 这是一个输入框，取过来的值，是字符型的。
+使用 console.log() 写入到浏览器的控制台。
+使用 document.write() 方法将内容写到 HTML 文档中。
+使用 innerHTML 写入到 HTML 元素。
+
+
+<script>
+	window.alert(5 + 6);
+</script>
+
+
+
+<body>
+
+	<h1>我的第一个 Web 页面</h1>
+	<p id="demo">我的第一个段落。</p>
+	<script>
+		document.getElementById("demo").innerHTML = "段落已修改。";
+	</script>
+
+</body>
+
+
+<body>
+
+	<h1>我的第一个 Web 页面</h1>
+	<p>我的第一个段落。</p>
+	<!-- <script>
+	document.write(Date());
+	</script> -->
+	<button onclick="myFunction()">点我</button>
+	<script>
+		function myFunction() {
+			document.write(Date());
+		}
+	</Script>
+
+</body>
+
+
+
+<body>
+	<p>
+		浏览器中(Chrome, IE, Firefox) 使用 F12 来启用调试模式， 在调试窗口中点击 "Console"
+		菜单。
+
+	</p>
+	<script>
+		a = 5;
+		b = 6;
+		c = a + b;
+		console.log(c);
+	</script>
+
+</body>

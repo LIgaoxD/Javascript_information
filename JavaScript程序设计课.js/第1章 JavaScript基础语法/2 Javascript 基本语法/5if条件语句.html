@@ -1,0 +1,140 @@
+在 JavaScript 中，我们可使用以下条件语句：
+
+if 语句 - 只有当指定条件为 true 时，使用该语句来执行代码
+if...else 双分支语句 - 当条件为 true 时执行语句1，当条件为 false 时执行其他代码
+if...else if....else 多分支语句- 使用该语句来选择多个代码块之一来执行
+switch 多分支语句   使用该语句来选择多个代码块之一来执行
+
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+
+		<script type="text/javascript">
+			var today = new Date();
+			document.write(today);
+			var hours = today.getHours();
+			// var hours = new Date().getDate();
+			console.log("hours");
+			if (hours >= 6 && hours <= 18) {
+				document.write("<br>现在是白天");
+			} else {
+				document.write("<br>现在是晚上");
+			}
+		</script>
+	</body>
+</html>
+
+======>>>>>>> if
+
+<p>如果时间早于 20:00，会获得问候 "Good day"。</p>
+<button onclick="myFunction()">点击这里</button>
+<p id="demo"></p>
+<script>
+	function myFunction() {
+		var x = "";
+		var time = new Date().getHours();
+		if (time < 20) {
+			x = "Good day";
+		} else {
+			x = "Good evening";
+		}
+		document.getElementById("demo").innerHTML = x;
+	}
+</script>
+
+
+<script type="text/javascript">
+	var d = new Date();
+	var time = d.getHours();
+	if (time < 10) {
+		document.write("<b>早上好</b>");
+	} else if (time >= 10 && time < 20) {
+		document.write("<b>今天好</b>");
+	} else {
+		document.write("<b>晚上好!</b>");
+	}
+</script>
+<p>
+	这个例子演示了 if..else if...else 语句。
+</p>
+
+======>>>>>> switch
+
+//表达式里经常写成变量
+//表达式必须和value全等  数据类型和值必须相等//////////**
+
+<script>
+	switch(表达式){
+		case value1:
+			执行语句1;
+			break;
+		case value2:
+			执行语句2;
+			break;
+			......
+		default:
+			执行最后的语句;
+	}
+</script>
+
+<p>点击下面的按钮来显示今天是周几：</p>
+<button onclick="myFunction()">点击这里</button>
+<p id="demo"></p>
+<script>
+	function myFunction() {
+		var x;
+		var d = new Date().getDay();
+		switch (d) {
+			case 0:
+				x = "今天是星期日";
+				break;
+			case 1:
+				x = "今天是星期一";
+				break;
+			case 2:
+				x = "今天是星期二";
+				break;
+			case 3:
+				x = "今天是星期三";
+				break;
+			case 4:
+				x = "今天是星期四";
+				break;
+			case 5:
+				x = "今天是星期五";
+				break;
+			case 6:
+				x = "今天是星期六";
+				break;
+		}
+		document.getElementById("demo").innerHTML = x;
+	}
+</script>
+
+
+<p>点击下面的按钮，会显示出基于今日日期的消息：</p>
+<button onclick="myFunction()">点击这里</button>
+<p id="demo"></p>
+<script>
+	function myFunction() {
+		var x;
+		var d = new Date().getDay();
+		switch (d) {
+			case 6:
+				x = "今天是星期六";
+				break;
+			case 0:
+				x = "今天是星期日";
+				break;
+			default:
+				x = "期待周末";
+		}
+		document.getElementById("demo").innerHTML = x;
+	}
+</script>

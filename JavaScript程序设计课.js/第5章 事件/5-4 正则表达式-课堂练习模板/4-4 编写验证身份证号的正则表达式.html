@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			
+			
+		window.onload=function(){
+			 var btn=document.getElementById("btn");
+			 var str=document.getElementById("str");
+			 
+			 btn.onclick=function(){
+				 
+			var reg=/^[1-9]\d{7}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}$
+				|^[1-9]\d{5}[1-9]\d{3}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}([0-9]|X)$/
+				
+				// var reg=/^\d{15}$|^\d{17}[0-9xX]$/;
+				// var reg=/^\w+$/;
+				
+				if(reg.test(str.value)){
+					 alert("是");
+				 } else{
+					 alert('否');
+				 }
+				console.log(reg.test(btn));
+				
+				// 身份证号: values
+				//const province = values.substring(0, 2) //省
+				//const city = values.substring(0, 4) //市
+				//const area = values.substring(0, 6) //区
+				//const sex = values.substring(16, 17) //性别
+		
+			 }
+			 
+		} 
+		
+		</script>
+		
+	</head>
+	<body>
+	
+		请输入一个字符串：<input type="text" id="str" >
+						<input type="button" id="btn" value="检测">
+		
+		
+	</body>
+</html>

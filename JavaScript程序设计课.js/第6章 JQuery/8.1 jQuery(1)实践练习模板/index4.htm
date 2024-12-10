@@ -1,0 +1,85 @@
+﻿<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>document</title>
+		<style>
+			span {
+				height: 40px;
+				width: 40px;
+				background-color: blue;
+				display: inline-block;
+			}
+		</style>
+
+
+
+	</head>
+	<body>
+		<div>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<div>
+				<!-- 每隔1块的底色为红色 
+			从第2块开始，每隔2块的底色为红色
+			从第3块开始，每隔2块的底色为红色
+			从第5块开始，每隔1块的底色为红色
+			从第5块开始，所有的底色为红色-->
+				<script src="./js/jquery-3.3.1.min.js"></script>
+				<script>
+					// 1.
+					// $("span:odd").css("background","red");
+					// 2.
+					// var spans=$("span");
+					// console.log(spans);
+					// var num=1;
+					// for(var i=0;i<spans.length;i++)
+					// {
+					// 	if(i%3==1)
+					// 	{
+					// 		spans[i].style.background='red';
+					// 	}
+					// }
+					// 3.
+					// var spans=$("span");
+					// console.log(spans);
+					// var num=1;
+					// for(var i=0;i<spans.length;i++)
+					// {
+					// 	if(i%3==2)
+					// 	{
+					// 		spans[i].style.background='red';
+					// 	}
+					// }
+					// 4.
+					// var spans=$("span");
+					// console.log(spans);
+					// var num=1;
+					// for(var i=0;i<spans.length;i++)
+					// {
+					// 	if(i==4||i==6||i==8)
+					// 	{
+					// 		spans[i].style.background='red';
+					// 	}
+					// }
+					// 5.
+					var spans = $("span");
+					console.log(spans);
+					var num = 1;
+					for (var i = 0; i < spans.length; i++) {
+						if (i == 4 || i == 5 || i == 6 || i == 7 || i == 8 || i == 9) {
+							spans[i].style.background = 'red';
+						}
+					}
+				</script>
+
+	</body>
+</html>

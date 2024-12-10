@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+
+		<script src="./js/jquery-3.5.1.min.js"></script>
+
+		<script>
+			$(function() {
+				//$("div[data-x]").css('color','red');
+
+				//$("div[class='test2']").css('color','red');
+				//$("div[class!='test2']").css('color', 'red');
+				//$("div[class^='te']").css('color', 'red');
+				//$("div[class$='st2']").css('color', 'red');
+				$("div[class*='st']").css('color', 'red');
+
+
+			})
+		</script>
+
+	</head>
+
+	<body>
+		<div data-x="jQuery选择器" class="test1">测试1</div>
+		<div class="test2">测试2</div>
+		<div class="test3">测试3</div>
+		<div id="test3">测试4</div>
+
+	</body>
+</html>

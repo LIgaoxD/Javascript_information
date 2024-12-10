@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<style>
+			img {
+				position: absolute;
+				top: 32x;
+				border: 1px solid #C81623;
+			}
+		</style>
+	</head>
+	<body>
+		<p>双击移动</p>
+		<img src="./images/angel.gif" alt="">
+
+		<script>
+			//找到元素
+			// var oim=document.querySelector("img");
+			// document.addEventListener('mousemove',function(e){
+
+			// })
+			var oimg = document.getElementsByTagName('img')[0];
+			// 给img绑定点击事件
+			oimg.onclick = function() {
+				// 绑定鼠标移动事件
+				document.onmousemove = function(e) {
+					// 获取鼠标的坐标系
+					oimg.style.left = e.clientX + 'px';
+					oimg.style.top = e.clientY + 'px';
+
+					console.log('clientX');
+					console.log('clientY');
+
+
+				}
+			}
+		</script>
+
+	</body>
+</html>

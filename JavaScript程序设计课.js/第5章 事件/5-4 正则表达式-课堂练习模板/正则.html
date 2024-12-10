@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			/*
+			var reg=/[mysql]/i;
+			var reg=/[a-z]/;
+			var reg=/[A-Z]/;
+			var reg=/[0-9]/;
+			var reg=/[0-9a-zA-Z]/;
+			var reg=/[\u4e00-\u9fa5]/;//任意的中文字符
+			var reg=/[\u4e00-\u9fa5$]/;	//匹配最后为中文
+			
+			var reg=/[^mysql]/i;	//取反符
+			*/
+		   
+		   var reg2=/a\d+b/;
+		   var reg2=/a\d?b/;
+		   var reg2=/a\d{5}b/;
+		   var reg2=/a\d{3,}b/;
+		   var reg2=/a\d{3,6}b/;
+		   
+			
+			var reg=/a/;	//包含'a'字母  区分大小写
+			// var reg=new RegExp("a");
+			
+			var reg1 =/a/i;		//不区分大小写
+			// var reg1=new RegExp("a"，"i");
+			
+			var s1='abcd';
+			var s2='javascript';
+			var s3='JAVA';
+			
+			console.log(reg.test(s1));  //t   
+			//test() 方法用于检测一个字符串是否匹配某个模式
+			console.log(reg.exec(s1));	
+			//exec() 方法用于检索字符串中的正则表达式的匹配
+			
+			console.log(reg.test(s2));	//t
+			console.log(reg.exec(s2));
+			
+			console.log(reg.test(s3));	//f
+			console.log(reg.exec(s3));
+			
+			console.log(reg1.test(s3));	//t
+			
+		</script>
+	</body>
+</html>

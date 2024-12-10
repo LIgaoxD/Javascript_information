@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<form action="" method="post">
+			<label>用户名：</label>
+			<input type="text" id="uname" />
+			<span id="unameMsg" style="color: red;"></span><br />
+			<label>中文名：</label>
+			<input type="text" id="unameChs" /><span id="unameChsMsg" style="color: red;"></span><br />
+			<label>年龄：</label>
+			<input type="text" id="age" /><span id="ageMsg" style="color: red;"></span><br />
+			<label>身份证号：</label>
+			<input type="text" id="idcard" /><span id="idcardMsg" style="color: red;"></span><br />
+			<label>电子邮箱：</label>
+			<input type="text" id="email" />
+			<span id="emailMsg" style="color: red;">
+			</span><br />
+
+			<br />
+
+			<input type="submit" value="提交" />
+			<input type="reset" value="重置" />
+		</form>
+
+		<script>
+			// 1、验证用户名：第1个字符为英文字母，其余字符可以为英文字母、数字和下划线；长度为5~10
+			var uname = document.getElementById("uname");
+			var unameMsg = document.getElementById("unameMsg");
+			var reg1 = /^[a-zA-Z]\w{4,9}$/i;
+			uname.onblur = function() {
+				if (this.value != "") {
+					if (!reg1.test(this.value)) {
+						unameMsg.innerHTML = '用户名不符合要求!';
+					} else {
+						unameMsg.innerHTML = '';
+					}
+				}
+			}
+
+
+
+			// 2、验证中文名：全部是汉字
+			var unameChs = document.getElementById("unameChs");
+			var unameChsMsg = document.getElementById("unameChsMsg");
+			var reg2 = /^[\u4e00-\u9fa5]+$/;
+			unameChs.onblur = function() {
+				if (this.value != "") {
+					if (!reg2.test(this.value)) {
+						unameChsMsg.innerHTML = '中文名不符合要求!';
+					} else {
+						unameChsMsg.innerHTML = '';
+					}
+				}
+			}
+
+			// 3、验证年龄：2个数值
+
+			var age = document.getElementById("age");
+			var ageMsg = document.getElementById("ageMsg");
+			var reg3 = /^\d{0,2}$/;
+			age.onblur = function() {
+				if (this.value != "") {
+					if (!reg3.test(this.value)) {
+						ageMsg.innerHTML = '年龄不符合要求!';
+					} else {
+						ageMsg.innerHTML = '';
+					}
+				}
+			}
+
+
+			// 4、验证身份证号：身份证号的规则为：15位号码时是全数字；18位号码时前17位是数字、最后一位可能是数字或者字符X
+			var idcard = document.getElementById("idcard");
+			var idcardMsg = document.getElementById("idcardMsg");
+			var reg4 = /^\d{18}$|^\d{17}[X]$|^\d{15}$/;
+			idcard.onblur = function() {
+				if (this.value != "") {
+					if (!reg4.test(this.value)) {
+						idcardMsg.innerHTML = '省份证不符合要求!';
+					} else {
+						idcardMsg.innerHTML = '';
+					}
+				}
+			}
+			// 5、验证电子邮箱
+			var email = document.getElementById("email");
+			var emailMsg = document.getElementById("emailMsg");
+			var reg5 = /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((\.[a-zA-Z0-9_-]{2,3}){1,2})$/;
+			email.onblur = function() {
+				if (this.value != "") {
+					if (!reg5.test(this.value)) {
+						emailMsg.innerHTML = '电子邮箱不符合要求!';
+					} else {
+						emailMsg.innerHTML = '';
+					}
+				}
+			}
+		</script>
+	</body>
+</html>

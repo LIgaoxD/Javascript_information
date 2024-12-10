@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<p id="countdown"></p>
+		<script>
+			
+			var intid=setInterval(countDown,1000)
+			function countDown() {
+
+				var nowTime = new Date();
+				var cdTime = new Date('2022-9-30 16:32:00'); //设置考试截止时间
+				
+				var times = parseInt((cdTime - nowTime) / 1000); //两个日期可以直接相减，得到的是毫秒数
+				 // console.log(times)                                                                
+				
+				
+				var h = parseInt(times / 60 / 60 % 24);
+				h = h < 10 ? '0' + h : h; //小时数不满10的前面补0
+				var m = parseInt(times / 60 % 60);
+				m = m < 10 ? '0' + m : m; //分钟数不满10的前面补0
+				var s = parseInt(times % 60);
+				s = s < 10 ? '0' + s : s; //秒数不满10的前面补0
+				
+				document.getElementById('countdown').innerText='距离考试结束还有：' + h + '时' + m + '分' + s + '秒';
+				
+				if(times===-1){
+					clearInterval(intid);
+					alert("考试时间到，请停止答题！");
+					}	
+			
+			}	
+			
+		</script>
+	</body>
+</html>

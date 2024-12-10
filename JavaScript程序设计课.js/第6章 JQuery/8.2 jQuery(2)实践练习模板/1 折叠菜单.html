@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>折叠菜单</title>
+		<style>
+			ul {
+				list-style: none;
+				padding: 0;
+				margin: 0
+			}
+
+			div {
+				width: 150px;
+				border: 1px solid #515E7B;
+				margin: 10px;
+			}
+
+			div li {
+				background: #515E7B;
+				border-bottom: 1px solid #fff;
+			}
+
+			div li a {
+				text-decoration: none;
+				color: #fff;
+				font-size: 16px;
+				height: 40px;
+				line-height: 40px;
+				padding-left: 10px;
+			}
+
+			div li a:hover {
+				text-decoration: underline;
+			}
+
+			.wrap {
+				width: 150px;
+				display: none;
+			}
+
+			.wrap li {
+				background: #fff;
+				margin: 0;
+			}
+
+			.wrap li a {
+				color: #3B475F;
+				font-size: 12px;
+			}
+		</style>
+		<script src="js/jquery-3.5.1.min.js"></script>
+		<script>
+			$(function() {
+				$('.wrap:first').slideDown(300);
+				$('#fold>ul>li>a').click(function() {
+					$(this).siblings('.wrap').slideDown(300);
+					$(this).parent().siblings('li').children('.wrap').slideUp(300);
+					console.log($(this));
+				})
+			});
+		</script>
+	</head>
+
+	<body>
+		<div id="fold">
+			<ul>
+				<li>
+					<a href="#">信息管理</a>
+					<ul class="wrap">
+						<li><a href="#">未读信息</a></li>
+						<li><a href="#">已读信息</a></li>
+						<li><a href="#">信息列表</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">商品管理</a>
+					<ul class="wrap">
+						<li><a href="#">商品添加</a></li>
+						<li><a href="#">商品列表</a></li>
+						<li><a href="#">商品分类</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">用户管理</a>
+					<ul class="wrap">
+						<li><a href="#">权限设置</a></li>
+						<li><a href="#">用户列表</a></li>
+						<li><a href="#">重置密码</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+
+	</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>表单事件</title>
+  <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.css" rel="stylesheet">
+  <style>
+    form {
+      width: 400px;
+      margin: 20px;
+    }
+  </style>
+</head>
+<body>
+  <form id="form">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+    </div>
+    <button id="submit" type="submit" class="btn btn-primary">提交</button>
+    <button id="reset"  type="reset" class="btn btn-default">重置</button>
+  </form>
+	
+  <script>
+	  
+	var form=document.getElementById("form");
+	form.onsubmit=function(e){		//提交事件
+		var email=document.getElementById("'exampleInputEmail1");
+		if(email.value.trim()==''){
+			// e.preventDefault();
+			alert('Email不能为空！');
+			// email.focus();
+		}
+	}
+
+
+
+  </script>
+</body>
+</html>

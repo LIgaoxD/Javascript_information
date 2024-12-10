@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//1.双重for循环  语法结构
+			// for () {
+			// 	for () {
+			// 		//执行语句
+			// 	}
+			// }
+			//2.我们可以把里面的循环看做是外层循环的语句
+			//3.外层循环循环一次，里面的循环执行全部
+			//4.案例
+			for (var i = 1; i <= 3; i++) {
+				console.log('这是外层的第' + i + '次');
+				for (var j = 1; j <= 3; j++) {
+					console.log('这是里层的循环第' + j + '次');
+				}
+			}
+
+
+
+
+			// 一行打印五个星星
+
+
+			// var num = prompt('请输入几个：'); //5
+			// for (var i = 1; i <= num; i++) {
+			// 	console.log("@");
+			// } //5@
+
+			// var num = prompt('请输入星星的个数：'); //5
+			// var str = '';
+			// for (var i = 1; i <= num; i++) {
+			// 	str += '@';
+			// }
+			// console.log(str); //@@@@@
+
+
+
+			// var rows = prompt('请你输入行数：');
+			// var cols = prompt('请您输入列数：');
+			// var str = '';
+			// for (var i = 1; i <= rows; i++) { //负责打印五行
+			// 	for (var j = 1; j <= cols; j++) { //一行五个@
+			// 		str += '@';
+			// 	}
+			// 	str += '\n';  //换行
+			// }
+			// console.log(str);
+
+			//倒三角
+			// var str = '';
+			// for (var i = 1; i <= 10; i++) {
+			// 	for (var j = i; j <= 10; j++) {
+			// 		str += "@";
+			// 	}
+			// 	str += '\n';
+			// }
+			// console.log(str);
+
+			//正三角
+			// var str = '';
+			// for (var i = 1; i <= 9; i++) {
+			// 	for (var j = 1; j <= i; j++) {
+			// 		//1×2=2
+			// 		// str += "@";
+			// 		str += i + '×' + j + '=' + i * j;
+			// 		str +='\t';
+			// 	}
+			// 	str += '\n';
+			// }
+			// console.log(str);
+		</script>
+	</body>
+</html>

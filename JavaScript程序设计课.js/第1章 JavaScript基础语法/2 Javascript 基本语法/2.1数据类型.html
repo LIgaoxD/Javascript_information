@@ -1,0 +1,98 @@
+值类型(基本类型)：字符串（String）、数字(Number)、布尔(Boolean)、
+空（Null）、未定义（Undefined）、Symbol(表示独一无二的值)。
+
+引用数据类型（对象类型）：对象(Object)、数组(Array)、函数(Function)，
+还有两个特殊的对象：正则（RegExp）和日期（Date）
+
+
+
+*****JavaScript 拥有动态类型。这意味着相同的变量可用作不同的类型：
+
+var x; // x 为 undefined
+var x = 5; // 现在 x 为数字
+var x = "John"; // 现在 x 为字符串
+
+变量的数据类型可以使用 typeof 操作符来查看：
+
+typeof "John" // 返回 string
+typeof 3.14 // 返回 number
+typeof false // 返回 boolean
+typeof [1,2,3,4] // 返回 object
+typeof {name:'John', age:34} // 返回 object
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>数据类型</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var a = 3.14;
+			var b = "abc";
+			var c = true;
+			var d;
+			var e = null;
+			
+			// var a = 3.14,
+			// 	b = "abc",
+			// 	c = true,
+			// 	d,
+			// 	e = null;
+			console.log(a);
+			console.log(b);
+			console.log(c);
+			console.log(d);
+			console.log(e);
+		</script>
+	</body>
+</html>
+
+
+******   字符串
+字符串的嵌套：外双内单  外单内双			\n 换行符  \b空格
+=====>>>>字符串长度  length属性获取整个字符串的长度
+字符串的拼接  +	数值相加，字符相连
+
+<script>
+	
+	var len = "run run runner";
+	console.log(len.length);
+	
+	var carname1 = "Volvo XC60";
+	var carname2 = 'Volvo XC60';
+	var answer1 = 'It\'s alright';
+	var answer2 = "He is called \"Johnny\"";
+	var answer3 = 'He is called "Johnny"';
+	document.write(carname1 + "<br>")
+	document.write(carname2 + "<br>")
+	document.write(answer1 + "<br>")
+	document.write(answer2 + "<br>")
+	document.write(answer3 + "<br>")
+</script>
+
+Volvo XC60
+Volvo XC60
+It's alright
+He is called "Johnny"
+He is called "Johnny"
+
+
+
+数字
+<script>
+	var x1 = 34.00;
+	var x2 = 34;
+	var y = 123e5; // e5表示有5个零
+	var z = 123e-5; // e-5表示小数点向前移5位
+	document.write(x1 + "<br>")
+	document.write(x2 + "<br>")
+	document.write(y + "<br>")
+	document.write(z + "<br>")
+</script>
+
+34
+34
+12300000
+0.00123

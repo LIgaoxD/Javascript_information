@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title> + V </title>
+
+	</head>
+	<body>
+		<script>
+			// var age = prompt('请输入你的年份');
+
+			// if (age % 4 == 0 && age % 100 != 0 || age % 400 == 0) {
+			// 	alert('闰年');
+			// } else {
+			// 	alert('平年');
+			// }
+
+
+			// var name = prompt('请用户输入你的姓名：');
+			// if (name == '高雪冬') {
+			// 	alert('中奖了');
+
+
+			// } else {
+
+			// 	alert('回家吧！洗洗睡！');
+			// }
+			// var score = prompt('你的成绩多少');
+			// if (score>=90){
+			// 	alert('A'+'奖励自己');
+			// }else if(score >=80){
+			// 	alert('B'+'鼓励自己');d
+
+			// }else if(score>=70){
+			// 	alert('C '+'再接再厉');
+			// }else{
+			// 	alert('D'+'加油加油！');
+			// }
+			// var time=prompt('请你输入一个数值');
+			//  var result =  time<10 ? '0'+ time :time;
+			// alert(result);
+			// var num = prompt('输入一个数字：');
+
+			// switch (parseInt(num)) {
+			// 	case 1:
+			// 		console.log('这是1');
+			// 		alert('你好');
+			// 		break;
+			// 	case 2:
+			// 		console.log('这是2');
+			// 		break;
+			// 	case 3:
+			// 		console.log('这是3');
+			// 		break;
+			// 	default:
+			// 		console.log('没有匹配结果');
+			// }
+			// var frut=prompt('请输入你想吃的水果：');
+			// switch(frut){
+			// 	case '苹果':
+			// 	alert('苹果的价格是5.5￥/斤');
+			// 	break;
+			// 	case '火龙果':
+			// 	alert('火龙果的价格是5.5￥/斤');
+			// 	break;
+
+			// 	case '香蕉':
+			// 	alert('香蕉的价格是5.5￥/斤');
+			// 	break;
+			// 	default:
+			// 	alert('什么都没有');}	
+			// var time = prompt('请输时间!');
+
+			// if (time ==12) {
+			// 	alert('中午好');
+			// } else if (time == 18) {
+			// 	alert('晚上好！');
+
+			// } else if (time == 23) {
+			// 	alert('深夜好！');
+
+			// }	
+			// else{
+			// 	alert('北北');
+			// }
+			// var num =  prompt('输入一个数');
+
+			// if (num % 2 === 0) {
+			// 	document.write('偶数');
+			// } else {
+			// 	document.write('奇数');
+			// }
+			// var date = prompt('今天星期几啊'),
+			// 	time = parseInt(date);
+			// switch (time) {
+			// 	case 1:
+			// 		alert('周1');
+			// 		break;
+			// 	case 2:
+			// 		alert('周q');
+			// 		break;
+			// 	case 3: 
+			// 		alert('周w');
+			// 		break;
+			// 	case 4:
+			// 		alert('周e');
+			// 		break;
+			// 	case 5:
+			// 		alert('周r');
+			// 		break;
+			// 	case 6:
+			// 		alert('周t');
+			// 		break;
+			// 	case 7:
+			// 		alert('周y');
+			// 		break;
+
+			// }
+			// var sum = 0.0;
+			// var avg = 0.0;
+			// var count = 0;
+			
+			// for (var i = 1; i <= 100; i++) {
+			// 	if (i % 3 == 0) {
+			// 		sum += i;
+			// 		count++;
+			// 	}
+			// }
+			// document.write(sum);
+			// console.log(sum);
+			// document.write(sum / count);
+			// console.log(count);
+			// console.log(sum / count);
+			var num = prompt('请输入班级有多少人:');
+			var sum = 0,
+				average = 0;
+			for (var i = 1; i <= num; i++) {
+			
+				var score = prompt('第' + i + '个人');
+				//因为从prompt里的数为字符串型的   数值型+字符串=数值型
+				
+				sum += parseFloat(score);
+			}
+			average = sum / num;
+			console.log(typeof(sum));
+			alert('班级平均分为' + average);
+			alert('班级总分为' + sum);
+			
+		</script>
+	</body>
+</html>

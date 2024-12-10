@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="UTF-8">
+		<title>天气</title>
+	</head>
+	<body>
+		<div id="app">
+			<h2>最新天气实况</h2>
+			<p>城市：<span></span></p>
+			<p>天气：<span></span></p>
+			<p>污染指数：<span></span></p>
+			<p>当前气温：<span></span></p>
+			<p>最高气温：<span></span></p>
+			<p>最低气温：<span></span></p>
+			<p>风向：<span></span></p>
+			<p>最新更新时间：<span></span></p>
+			<p>温馨提醒：<span></span></p>
+			<h2>未来7天天气预报</h2>
+			<table border="1" id="detail" cellpadding="3" cellspacing="0">
+				<thead>
+					<tr>
+						<th>日期</th>
+						<th>天气</th>
+						<th>污染指数</th>
+						<th>最高气温</th>
+						<th>最低气温</th>
+						<th>风向</th>
+						<th>风力</th>
+					</tr>
+				</thead>
+				<tbody>
+
+				</tbody>
+			</table>
+		</div>
+
+		<script src="./js/jquery-3.5.1.min.js"></script>
+
+		<script>
+			//   https://www.tianqiapi.com/    
+
+			$(function() {
+				$.get("https://www.tianqiapi.com/free/day?appid=74435523&appsecret=zOy9zaAv", {
+						city: '哈尔冰'
+					},
+					function(rep, status) {
+						if (status == 'success') {
+							console.log(rep);
+							
+							$("#app span").eq(0).html(rep.city);
+							$("#app span").eq(1).html(rep.wea);
+							$("#app span").eq(2).html(rep.air);
+							$("#app span").eq(3).html(rep.tem);
+							$("#app span").eq(4).html(rep.tem_day);
+							$("#app span").eq(5).html(rep.tem_night);
+							$("#app span").eq(6).html(rep.win);
+							$("#app span").eq(7).html(rep.update_time);
+						}
+					},
+					"json"
+				);
+			})
+		</script>
+	</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+
+			var subject = 'Js+jQuery 12345';
+			document.write(subject + '<hr>');
+			var reg = /\d+\d+\d+\d|\d+/g;
+			var result = subject.match(reg);
+			console.log(result);
+			// 定义正则
+			var reg = /[0-9]{4}|[a-z]{4}/gi;
+			// 测试
+			console.log('12abcd3456'.match(reg));
+		</script>
+
+	</body>
+</html>

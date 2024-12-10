@@ -1,0 +1,24 @@
+﻿<!doctype html>
+<html>
+	<head>
+	</head>
+	<body>
+		<h1 id="main_header">Welcome to My Homepage</h1>
+
+		<a href="#">主页</a></br></br>
+		<a href="http://www.ccit.js.cn">常州信息职业技术学院</a></br></br>
+		<a href="http://www.ccit.js.cn/jwc/student">常州信息职业技术学院教务处学生入口</a></br></br>
+		<a href="http://www.ccit.js.cn/rsc/readme.doc">常州信息职业技术学院人事处XXX文件</a></br></br>
+	</body>
+	<!-- （1）把href=#的元素的字体设置为40。
+（2）把href以“http”开头的元素设置为斜体。
+（3）把href以“doc”结尾的元素设置为粗体。
+（4）把href中包含“jwc”的元素的字体设置为30。 -->
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script>
+		$("a[href='#']").css("font-size", "40px");
+		$("a[href^='http']").css("font-style", "italic");
+		$("a[href$='doc']").css("font-weight", "bold");
+		$("a[href*='jwc']").css("font-size", "30px");
+	</script>
+</html>

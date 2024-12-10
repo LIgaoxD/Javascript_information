@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>遍历DOM节点</title>
+
+		<script src="./js/jquery-3.5.1.min.js"></script>
+		<script>
+			$(function() {
+				var arrColor = ["red", "green", "blue", "orange", "pink", "aqua"];
+				var sum = 0;
+				$('button').click(function() {
+					$('li').each(function(i, ele) {
+						// console.log(i);
+						// console.log(ele);
+						// console.log(ele.innerHTML);
+						// console.log($(ele).text());
+
+						$(ele).css('color', arrColor[i]);
+						sum = sum + parseInt($(ele).text());
+					});
+
+					$('p').text("总和为:" + sum);
+					console.log(sum);
+				});
+			});
+		</script>
+
+	</head>
+	<body>
+		<ul>
+			<li>20</li>
+			<li>45</li>
+			<li>72</li>
+			<li>16</li>
+			<li>57</li>
+			<li>81</li>
+		</ul>
+		<button>点击我</button>
+		<p></p>
+	</body>
+</html>

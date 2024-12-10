@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//1. 循环的目的: 可以重复执行某些代码，通常跟计数有关
+			//2. for语法结构
+
+			for (初始化变量; 条件表达式; 操作表达式) {
+				循环体
+			}
+
+			//3. 初始化变量 通常用 var 声明的一个普通变量， 通常用于作为计数器使用
+			//4. 条件表达式 就是用来决定每一次循环是否继续执行 就是终止的条件
+			//5. 操作表达式 每次循环最后执行的代码 经常用于我们计数器变量进行更新（递增或递减）
+
+			for (var i = 1; i <= 100; i++) { //  1   2   3
+
+				console.log('我爱你'); //   4
+				执行过程 1 2 4 3 2 4 3 2 4 3 2 4 3
+			}
+			// 断点调试 的使用
+
+			//求和 1-100
+			var sum = 0;
+			for (var i = 1; i <= 100; i++) {
+				sum = i + sum;
+				sum += i;
+			}
+			console.log(sum);
+
+			//平均值
+			var sum = 0;
+			for (var i = 1; i <= 100; i++) {
+				sum = i + sum;
+			}
+			average = sum / 100;
+			console.log(average);
+
+			//偶数和奇数的和
+			var even = 0;
+			var odd = 0;
+
+			for (var i = 1; i <= 100; i++) {
+				if (i % 2 == 0) {
+					even += i;
+				} else {
+					odd += i;
+				}
+			}
+			console.log(even);
+			console.log(odd);
+
+			//能被三整除的数字的和
+			var result = 0;
+			for (var i = 1; i <= 100; i++) {
+				if (i % 3 == 0) {
+					result += i;
+				}
+			}
+			console.log(result);
+			
+
+			var sum = 0.0;
+			var avg = 0.0;
+			var count = 0;
+
+			for (var i = 1; i <= 100; i++) {
+				if (i % 3 == 0) {
+					sum += i;
+					count++;
+				}
+			}
+			document.write(sum);
+			console.log(sum);
+			document.write(sum / count);
+			console.log(sum / count);
+
+
+			//案例1.算班级学生成绩
+
+			var num = prompt('请输入班级有多少人:');
+			var sum = 0,
+				average = 0;
+			for (var i = 1; i <= num; i++) {
+
+				var score = prompt('第' + i + '个人');
+				//因为从prompt里的数为字符串型的	  数值型+字符串=数值型
+				sum += parseFloat(score);
+			}
+			average = sum / num;
+			console.log(typeof(sum));
+			alert('班级平均分为' + average);
+			alert('班级总分为' + sum);
+
+
+
+
+
+
+
+
+
+
+
+
+		</script>
+	</body>
+</html>

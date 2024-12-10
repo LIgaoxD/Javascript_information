@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<style>
+			div {
+				width: 150px;
+				height: 300px;
+				background-color: pink;
+			}
+		</style>
+
+		<script src="./js/jquery-3.5.1.min.js"></script>
+
+		<script>
+			$(function() {
+
+				$('button').click(function() {
+					var ix = $(this).index();
+					if (ix == 0) {	//显示
+						$("div").show('fast');
+					} else if (ix == 1) {	//隐藏
+						$("div").hide(1000, function() {
+							alert('已隐藏！');
+						});
+					} else if (ix == 2) {	//切换
+						$("div").toggle();
+					}
+				})
+			})
+		</script>
+
+	</head>
+	<body>
+		<button>显示</button>
+		<button>隐藏</button>
+		<button>切换</button>
+		<div></div>
+	</body>
+</html>

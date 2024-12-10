@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			div {
+				background: #98bf21;
+				height: 100px;
+				width: 100px;
+				position: absolute;
+			}
+		</style>
+
+
+	</head>
+	<body>
+		<button>开始动画，循环执行</button>
+		<input type="text">
+		<!-- 当文本框获得焦点时改变背景颜色，获得焦点时，背景色为“#FFFF66”；
+		     当失去焦点时，背景色为“#FFFFFF”。 -->
+		<script src="./js/jquery-3.3.1.min.js"></script>
+		<script>
+			var a = $("input");
+			a.focus(function() {
+				a.css("background-color", "#FFFF66");
+			}).blur(function() {
+				a.css("background-color", "#FFFFFF");
+			})
+		</script>
+	</body>
+</html>

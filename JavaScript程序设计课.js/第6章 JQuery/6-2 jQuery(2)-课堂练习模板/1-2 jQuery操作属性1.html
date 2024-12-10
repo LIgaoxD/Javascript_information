@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+
+		<script src="./js/jquery-3.5.1.min.js"></script>
+		<script>
+			$(function() {
+
+				$('button').eq(0).click(function() {
+					// var href=$('a').prop('href');
+					var href = $('a').attr('href');
+					console.log(href);
+
+					// var title=$('a').prop('title');
+					var title = $('a').attr('title');
+					console.log(title);
+
+					// var index=$('a').prop('index');
+					var index = $('a').attr('index');
+					console.log(index);
+
+					// var text=$('input').val();
+					// console.log(text);
+
+					var text = $('input').attr('value');
+					console.log(text);
+
+				});
+
+				$('button').eq(1).click(function() {
+
+					$('a').prop('title', 'CCIT主页');
+					$('a').attr('title', 'CCIT主页');
+
+					$('a').prop('index', '200');
+					$('a').attr('index', '200');
+
+				});
+			});
+		</script>
+
+	</head>
+	<body>
+		<a href="http://www.ccit.js.cn" title="主页" index=1>常州信息职业技术学院</a><br />
+		<input type="text" name="" id="" value="CCIT"><br><br><br>
+		<button>获取属性值</button>&nbsp;<button>设置属性值</button>
+	</body>
+</html>

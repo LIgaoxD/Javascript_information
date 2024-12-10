@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			span {
+				color: red;
+			}
+		</style>
+
+		<script src="./js/jquery-3.5.1.min.js"></script>
+
+		<script>
+			$(function() {
+				$('button').eq(0).click(function() {
+
+					console.log($('div'));
+					console.log($('div').html());
+					console.log($('div:first').html());
+					console.log($('div:last').html());
+					console.log($('div:last').text());
+
+					console.log($('input').val());
+
+				})
+
+				$('button').eq(1).click(function() {
+
+					$('div').html('Hi');
+					$('div').text('Hi');
+
+					$('p').html("<span>Hello北北！</span>");
+					$('p').text('<span>Hello北北！</span>');
+
+					$('div').val('');
+					$('div').val('zxc');
+
+					$('p')[0].innerHTML = "<span>Hello北北！</span>";
+					$('p')[0].innerText = "<span>Hello北北！</span>";
+
+					$('p').html("<span>Hello北北！</span>");
+					$('p:first').html("<span>Hello北北！</span>");
+
+				})
+			})
+		</script>
+
+	</head>
+	<body>
+		<div>
+			<span>Hello</span>
+		</div>
+		<div>
+			<p>这是一个段落</p>
+		</div>
+
+		</div>
+		<input type="text" value="100" /><br />
+		<button>获取元素内容</button>&nbsp;<button>设置元素内容</button>
+	</body>
+</html>

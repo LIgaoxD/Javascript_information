@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+      div {
+        width: 150px;
+        height: 300px;
+        background-color: pink;
+      }
+    </style>
+	
+    <script src="./js/jquery-3.5.1.min.js"></script>
+		<script>
+			$(function(){
+				
+				$('button').click(function() {
+					var ix = $(this).index();
+					if (ix == 0) {	//显示
+						$("div").fadeIn(2000);
+					} else if (ix == 1) {	//隐藏
+						$("div").fadeOut(2000);
+					} else if (ix == 2) {	//切换
+						$("div").fadeToggle(2000);
+					}
+				})
+
+			})
+		</script>
+	
+  </head>
+  <body>
+    <button>淡入</button>
+    <button>淡出</button>
+    <button>切换</button>
+    <div></div>
+  </body>
+</html>

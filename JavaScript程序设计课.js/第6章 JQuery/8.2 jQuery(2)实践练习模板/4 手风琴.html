@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<style>
+			/* 清除元素的margin和padding */
+			* {
+				margin: 0;
+				padding: 0;
+			}
+
+			/* 设置最外层盒子的样式 */
+			.king {
+				width: 710px;
+				margin: 100px auto;
+				background: url(images/bg.png) no-repeat;
+				overflow: hidden;
+				padding: 10px;
+			}
+
+			/* 取消列表的 默认样式 */
+			.king ul {
+				list-style: none;
+			}
+
+			/* 设置列表的样式 */
+			.king li {
+				position: relative;
+				float: left;
+				width: 69px;
+				height: 69px;
+				margin-right: 10px;
+			}
+
+			/* 设置初始状态 */
+			.king li.current {
+				width: 224px;
+			}
+
+			.king li.current .big {
+				display: block;
+			}
+
+			.king li.current .small {
+				display: none;
+			}
+
+			/* 设置大方块样式 */
+			.big {
+				width: 224px;
+				height: 69px;
+				display: none;
+				border-radius: 5px;
+			}
+
+			/* 设置小方块样式 */
+			.small {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 69px;
+				height: 69px;
+				border-radius: 5px;
+			}
+
+			/* 设置大小方块的背景色*/
+			.red1 {
+				background: #FF3333;
+			}
+
+			.red2 {
+				background: #CC0000;
+			}
+
+			.orange1 {
+				background: #FFBB66;
+			}
+
+			.orange2 {
+				background: #FF8800;
+			}
+
+			.yellow1 {
+				background: #FFFFBB;
+			}
+
+			.yellow2 {
+				background: #FFFF77;
+			}
+
+			.green1 {
+				background: #99FF99;
+			}
+
+			.green2 {
+				background: #66FF66;
+			}
+
+			.blue1 {
+				background: #00BBFF;
+			}
+
+			.blue2 {
+				background: #0066FF;
+			}
+
+			.pink1 {
+				background: #FF88C2;
+			}
+
+			.pink2 {
+				background: #FF44AA;
+			}
+
+			.purple1 {
+				background: #E93EFF;
+			}
+
+			.purple2 {
+				background: #CC00FF;
+			}
+		</style>
+		<script src="js/jquery-3.5.1.min.js"></script>
+		<script>
+			$(function() {
+				$('.king li').mouseenter(function() {
+					// $(this).addClass('current').siblings('li').removeClass('current');	
+
+					$(this).stop().animate({
+						width: '224px'
+					}, 800).children('.small').stop().fadeOut(500).siblings('.big').stop().fadeIn(500);
+
+					$(this).siblings('li').stop().animate({
+						width: '69px'
+					}, 800).children('.big').stop().fadeOut(500).siblings('.small').stop().fadeIn(500);
+
+				})
+			});
+		</script>
+	</head>
+
+	<body>
+		<div class="king">
+			<ul>
+				<li class="current">
+					<div class="small red1"></div>
+					<div class="big red2"></div>
+				</li>
+				<li>
+					<div class="small orange1"></div>
+					<div class="big orange2"></div>
+				</li>
+				<li>
+					<div class="small yellow1"></div>
+					<div class="big yellow2"></div>
+				</li>
+				<li>
+					<div class="small green1"></div>
+					<div class="big green2"></div>
+				</li>
+				<li>
+					<div class="small blue1"></div>
+					<div class="big blue2"></div>
+				</li>
+				<li>
+					<div class="small pink1"></div>
+					<div class="big pink2"></div>
+				</li>
+				<li>
+					<div class="small purple1"></div>
+					<div class="big purple2"></div>
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>

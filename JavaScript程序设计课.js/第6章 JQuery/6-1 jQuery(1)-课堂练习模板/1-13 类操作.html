@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			.intro {
+				font-size: 150%;
+				color: blue;
+				background-color: yellow;
+			}
+		</style>
+
+		<script src="./js/jquery-3.5.1.min.js"></script>
+		<script>
+			$(function() {
+				$("button").eq(0).click(function() {
+					// console.log('1');
+					$("p").addClass('intro');
+				})
+				$("button").eq(1).click(function() {
+					// console.log('1');
+					$("p:first").removeClass('intro');
+				})
+				$("button").eq(2).click(function() {
+					// console.log('1');
+					$("p:first").toggleClass('intro');
+				})
+
+
+			})
+		</script>
+
+	</head>
+
+	<body>
+		<h1>This is a heading</h1>
+		<p>This is a paragraph.</p>
+		<p>This is another paragraph.</p>
+		<button>向两个 p 元素添加intro类</button><br />
+		<button>移除第一个 p 元素中的intro类</button><br />
+		<button>切换第一个 p 元素中的intro类</button>
+	</body>
+</html>

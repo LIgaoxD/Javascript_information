@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		
+		<script src="./js/jquery-3.5.1.min.js"></script>	
+		
+	</head>
+	<body>
+		<ul id="father">
+			<li class="first">子元素1</li>
+			<li class="second">子元素2</li>
+			<li class="third">子元素3</li>
+			<li>子元素4</li>	
+			<li>子元素5</li>	
+			<li>子元素6</li>	
+		</ul>	
+		
+		<script> 
+		$('#father').css("color",'red');
+		$('.third').css("color",'red');
+		$('li:first').css("color",'red');
+		$('li:last').css("color",'red');
+		$('li:eq(2)').css("color",'red');
+		$('li').eq(2).css("color",'red');
+		
+		
+		$('li:odd').css("color",'red');
+		$('li:even').css("color",'red');
+
+
+		</script>			
+		
+	</body>
+</html>

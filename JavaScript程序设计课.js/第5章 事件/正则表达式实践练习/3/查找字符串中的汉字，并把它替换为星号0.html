@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var subject = 'HTML+CSS+Javascript的组合';
+			document.write(subject + '<hr>');
+			changeToStar(str, len1, len2 = 0) {
+				let strLen = str.length;
+				let stars = ''
+				for (let i = 0; i < strLen - len1 - len2; i++) {
+					stars += '*'
+				}
+				str = str.substr(0, len1) + stars + str.substr(strLen - len2);
+				return str;
+			}
+		</script>
+
+	</body>
+</html>

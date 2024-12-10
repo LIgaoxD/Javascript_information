@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="text" name="" id="clock">
+		<input type="button" name="" id="button" value="停止" onclick="stop()">
+		<input type="button" name="" id="button" value="开始" onclick="start()">
+		<script>
+			var intervaild = setInterval(clock, 1000); //定时器
+			var setTimeout = intervaild;
+
+			function clock() {
+				var d = new Date();
+				var t = d.toLocaleTimeString();
+				document.getElementById("clock").value = t;
+			}
+
+			function stop() {
+				clearInterval(intervaild);
+			}
+
+			function start() {
+				intervaild = setInterval(clock, 1000);
+			}
+		</script>
+	</body>
+</html>

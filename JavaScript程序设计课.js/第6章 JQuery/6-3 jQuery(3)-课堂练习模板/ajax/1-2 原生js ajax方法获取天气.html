@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="UTF-8">
+		<title>天气</title>
+	</head>
+	<body>
+		<div id="app">
+			<h2>最新天气实况</h2>
+			<p>城市：<span></span></p>
+			<p>天气：<span></span></p>
+			<p>污染指数：<span></span></p>
+			<p>当前气温：<span></span></p>
+			<p>最高气温：<span></span></p>
+			<p>最低气温：<span></span></p>
+			<p>风向：<span></span></p>
+			<p>最新更新时间：<span></span></p>
+		</div>
+
+		<script src="./js/jquery-3.5.1.min.js"></script>
+
+		<script>
+			//   https://www.tianqiapi.com/     
+			//  https://www.tianqiapi.com/free/day?appid=74435523&appsecret=zOy9zaAv&city=上海
+			$(function() {
+				var xmlhttp = new XMLHttpRequest();
+				xmlhttp.open('get', "https://www.tianqiapi.com/free/day?appid=74435523&appsecret=zOy9zaAv&city=上海",
+					true);
+				xmlhttp.send();
+
+				xmlhttp.onreadystatechange = function() {
+					if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+						var rep = xmlhttp.responseText;
+						rep = JSON.parse(rep);
+						console.log(rep);
+
+						$("#app span").eq(0).html(rep.city);
+						$("#app span").eq(1).html(rep.wea);
+						$("#app span").eq(2).html(rep.air);
+						$("#app span").eq(3).html(rep.tem);
+						$("#app span").eq(4).html(rep.tem_day);
+						$("#app span").eq(5).html(rep.tem_night);
+						$("#app span").eq(6).html(rep.win);
+						$("#app span").eq(7).html(rep.update_time);
+
+
+					}
+				}
+
+
+			})
+		</script>
+	</body>
+</html>

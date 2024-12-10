@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>使用事件委托注册点击事件</title>
+</head>
+<body>
+  <div class="btns">
+    <button id="check">查看</button>
+    <button id="add">添加</button>
+    <button id="modify">修改</button>
+    <button id="delete">删除</button>
+  </div>
+  <script>
+	 
+	document.addEventListener("click",function(e){
+		
+	console.log(e.target);  //  触发事件元素对象
+	
+	//target 事件属性可返回事件的目标节点（触发该事件的节点）
+	
+	if(e.target.id=="check"){		//委托功能
+		alert("查看");
+		
+	}
+	else if(e.target.id=="add"){
+		alert("添加");
+		
+	}
+	else if(e.target.id=="modify"){
+		alert("修改");
+		
+	}
+	else {
+		alert("删除");
+	}
+	
+	e.target.style.color="orange";
+	
+	})
+	
+	
+	
+	
+	
+	
+	
+	// var ocheck=document.getElementById("check");
+	// ocheck.addEventListener("click",function(){
+	// 	alert("1");
+	// })
+
+
+  </script>
+</body>
+</html>

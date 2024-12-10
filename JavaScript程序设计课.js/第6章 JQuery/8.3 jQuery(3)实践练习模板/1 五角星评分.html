@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			* {
+				padding: 0;
+				margin: 0;
+			}
+
+			.comment {
+				font-size: 40px;
+				color: red;
+			}
+
+			.comment li {
+				float: left;
+				cursor: pointer;
+			}
+
+			ul {
+				list-style: none;
+			}
+		</style>
+
+		<script src="./js/jquery-3.3.1.min.js"></script>
+
+		<script>
+			/*
+		  （1）当鼠标移动到某一个五角星上时，则把当前及其前面的五角星显示为实心五角星（★）、其后面的五角星显示为空心五角星（☆）；
+						当鼠标从五角星上移开时，则全部显示为空心五角星（☆）。
+			（2）当鼠标移动到某一个五角星上、并且单击鼠标时，则使当前及其前面的五角星确定显示为实心五角（★）、其后面的五角星确定显示为空心五角星（☆），
+			      此时再把鼠标从五角星上移开时，不再发生变化。
+			*/
+
+			$(function() {
+				//获取所有的li绑定鼠标进入和鼠标离开和点击事件
+				$(".comment>li").mouseover(function() {
+					$(this).text("★").prevAll("li").text("★")
+					$(this).nextAll("li").text("☆");
+				});
+				$(".comment>li").mouseout(function() {
+					$(this).text("☆");
+
+					$(".comment>li[flag]").text("★").prevAll("li").text("★");
+				});
+				
+				$(".comment>li").click(function() {
+					$(this).attr("flag", "1").siblings().removeAttr('flag');
+				});
+
+			});
+		</script>
+
+	</head>
+
+	<body>
+		<ul class="comment">
+			<li>☆</li> <!-- ★ -->
+			<li>☆</li>
+			<li>☆</li>
+			<li>☆</li>
+			<li>☆</li>
+		</ul>
+	</body>
+</html>

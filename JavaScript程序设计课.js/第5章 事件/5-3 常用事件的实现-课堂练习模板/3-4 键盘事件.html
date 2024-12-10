@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>键盘事件</title>
+		<link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.css" rel="stylesheet">
+		<style>
+			form {
+				width: 400px;
+				margin: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<form>
+			<div class="form-group">
+				<label for="exampleInputEmail1">Email address</label>
+				<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+			</div>
+			<div class="form-group">
+				<label for="exampleInputPassword1">Password</label>
+				<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+			</div>
+			<button type="submit" class="btn btn-primary">Submit</button>
+		</form>
+		<script>
+			var email = document.getElementById("exampleInputEmail1");
+
+			// email.onkeydown = function(e) {
+
+			// 	console.log(e.key, e.keyCode);
+
+			// 	if (e.ctrlKey && e.keyCode == 66) {
+
+			// 		console.log("Ctrl+B(b)");
+
+			// 	}
+
+			// }
+			
+			
+				// email.onkeyup=function(e){
+					
+				// }
+				
+
+			// email.onkeypress = function() {
+			// 	console.log(e.key, e.keyCode);
+			// }
+
+			//支持
+
+			// email.addEventListener("textInput", function(e) {
+			// 	console.log(e.data);
+			// })
+			
+			//这种方法绑定事件不支持
+
+			// email.ontextInput = function() {
+			// 	console.log(date);
+			// }
+		</script>
+	</body>
+</html>

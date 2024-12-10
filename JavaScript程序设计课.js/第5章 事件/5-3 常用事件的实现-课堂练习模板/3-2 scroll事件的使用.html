@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>scroll浜嬩欢</title>
+  <style>
+    html,body {
+      height: 100%;
+      overflow: auto;
+    }
+    #block {
+      height: 2000px;
+    }
+    #wrapper {
+      background: green;
+      overflow: auto;
+      height: 200px;
+      width: 300px;
+    }
+    #inner {
+      height: 400px;
+    }
+  </style>
+  <script>
+	  window.onclick=function(){
+		  
+		  var wrapper=document.getElementById("wrapper");
+		  
+		  wrapper.onscroll=function(){
+			  
+			console.log(this.scrollTop,this.offsetHeight,this.scrollHeight);
+			
+		 
+		  if(this.scrollTop+this.offsetHeight==this.scrollHeight){
+			  
+			  console.log("已到达底部！");
+		  } 
+		}
+	  }
+  </script>
+</head>
+<body>
+  <div id="block">
+    <div id="wrapper">
+      <div id="inner">inner</div>
+    </div>
+  </div>
+ 
+</body>
+</html>

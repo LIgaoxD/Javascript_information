@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>标准事件对象阻止事件冒泡</title>
+    <style>
+        #red {
+            width: 200px;
+            height: 200px;
+            background: red;
+        }
+        #blue {
+            width: 300px;
+            height: 300px;
+            background: blue;
+        }
+        #green {
+            width: 400px;
+            height: 400px;
+            background: green;
+        }
+    </style>
+</head>
+<body>
+    <div id="green">
+		
+        <div id="blue">
+			
+            <div id="red">
+				
+			</div>
+        </div>
+    </div>
+    <script>
+	var red=document.getElementById("red");
+	red.onclick=function(e){		//点击事件
+		e.stopPropagation();  //阻止事件冒泡
+		alert("red");
+		
+	}
+	
+	
+	var blue=document.getElementById("blue");
+	blue.onclick=function(e){
+		e.stopPropagation();
+		alert("blue");
+		
+	}
+
+	var green=document.getElementById("green");
+	green.onclick=function(){
+		alert("green");
+		
+	}
+	
+
+
+    </script>
+</body>
+</html>

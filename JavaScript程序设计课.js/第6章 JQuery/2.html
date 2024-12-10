@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="jquery-3.3.1.min.js"></script>
+			
+		<script>
+			$(function() {
+
+						$("#div")
+						$(".class")
+						$("div")
+						$("p")
+
+						$("ul li") 		$("ul").find("li")
+						$("ul>li") 		$("ul").children("li")
+						$("h1+div")
+						$("h1~div")
+
+						$("p:first") 		$("p:last")
+						$("p:eq(2)") 		$("p").eq("2")
+						$("p:odd") 			$("p:even")
+						$("p:gt(2)") 		$("p:it(2)")
+						$("p:contains('jQuery')")
+
+						$("p:eq(2)").siblings()
+						$("p:eq(2)").siblings("p")
+
+						$("div[class]")
+						$("div[class='text']") 		$("div[class!='text']")
+						$("div[class^='text']") 	$("div[class$='text']")
+						$("div[class*='text']")
+
+						$("p:nth-child(1)") 	$("p:nth-of-type(1)")
+						$("p:first-child") 		$("p:last-child")
+						$("p:nth-child(odd)") 	$("p:nth-child(even)")
+						$("p:nth-child(3n+2)") 	$("p:nth-child(n+3)")
+
+						$("button") 	$(":button")
+						$("input") 		$(":input") 
+						$(":text") 		$(":password") 
+						$(":checkbox") 
+						$(":checkbook:checked")
+
+
+						})
+		</script>
+	</head>
+	<body>
+	
+		<p id="id"></p>
+		<p class="class"></p>
+		<div></div>
+		<p></p>
+		
+		<ul>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+		<h1><div></div></h1>
+		
+		<p></p>
+		<p></p>
+		<p></p>
+		
+		<div></div>
+		<div></div>
+		<div></div>
+		
+		<button></button>
+		<input type="button">
+		<input type="password">
+		<input type="text">
+		
+	</body>
+</html>

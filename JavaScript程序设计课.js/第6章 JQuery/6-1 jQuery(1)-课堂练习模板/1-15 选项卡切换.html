@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+
+			li {
+				list-style-type: none;
+			}
+
+			.tab {
+				width: 978px;
+				margin: 100px auto;
+			}
+
+			.tab_list {
+				height: 39px;
+				border: 1px solid #ccc;
+				background-color: #f1f1f1;
+			}
+
+			.tab_list li {
+				float: left;
+				height: 39px;
+				line-height: 39px;
+				padding: 0 20px;
+				text-align: center;
+				cursor: pointer;
+			}
+
+			.tab_list .current {
+				background-color: #c81623;
+				color: #fff;
+			}
+
+			.tab_con {
+				padding: 20px 0 0 20px;
+				/* top right bottom left */
+				height: 600px;
+				border: 1px solid #ccc;
+				border-top-style: none;
+			}
+
+			.item {
+				display: none;
+			}
+		</style>
+
+		<script src="./js/jquery-3.5.1.min.js"></script>
+
+		<script>
+			$(function() {
+				$(".tab_list li").click(function() {
+					//            var $this=$(this);
+					//            alert($this.index());
+					$(this).addClass("current").siblings().removeClass("current");
+					// siblings() 方法返回被选元素的所有同级元素
+					// index()方法用于返回指定元素相对于其他指定元素的index位置，或者获得元素相对于选择器的index位置
+					$(".tab_con .item").eq($(".tab_list li").index(this)).show().siblings(
+						".tab_con .item").hide();
+				});
+			});
+		</script>
+	</head>
+
+	<body>
+		<div class="tab">
+			<div class="tab_list">
+				<ul>
+					<li class="current">商品介绍</li>
+					<li>规格与包装</li>
+					<li>售后保障</li>
+					<li>商品评价（50000）</li>
+					<li>手机社区</li>
+				</ul>
+			</div>
+			<div class="tab_con">
+				<div class="item" style="display: block;">商品介绍模块内容</div>
+				<div class="item">规格与包装模块内容</div>
+				<div class="item">售后保障模块内容</div>
+				<div class="item">商品评价（50000）模块内容</div>
+				<div class="item">手机社区模块内容</div>
+			</div>
+		</div>
+	</body>
+</html>

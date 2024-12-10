@@ -1,0 +1,38 @@
+﻿<!doctype html>
+<html>
+	<head>
+	</head>
+	<body>
+		<h1 class="intro">Welcome to My Homepage</h1>
+		<p class="intro">My name is Donald</p>
+		<p>I live in Duckburg</p>
+		<p id="x1">My best friend is Mickey</p>
+		<div id="choose">
+			Who is your favourite:
+			<ul>
+				<li>Goofy</li>
+				<li>Mickey</li>
+				<li>Pluto</li>
+				<li>Rose</li>
+				<li>Smith</li>
+				<li>Tom</li>
+			</ul>
+		</div>
+		<!-- （1）所有的<p>段落设置为斜体。
+（2）class为“intro”的<h1>元素内容的底色设置为"#B2E0FF"。
+（3）id为“x1”的元素内容设置为粗体。
+（4）列表中的第1项内容设置为蓝色。
+（5）列表中的最后1项内容设置为绿色。
+（6）列表中的第3项内容设置为红色。 -->
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script>
+			$("p").css("font-style", "italic");
+			$(".intro:first-child").css("color", "red");
+			$("#x1").css("font-weight", "bold");
+			$("li:first-child").css("color", "blue");
+			$("li:last-child").css("color", "green");
+			// $("li:nth-child(3)").css("color", "red");
+			$("li:eq(2)").css("color","red");
+		</script>
+	</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			.intro {
+				color: red;
+			}
+		</style>
+
+		<script src="./js/jquery-3.5.1.min.js"></script>
+		<script>
+			$(function() {
+				var arrColor = ["red", "green", "blue", "orange", "pink", "aqua"];
+
+				$('button').click(function() {
+					$('li').each(function(i, ele) {
+						console.log(i);
+						// console.log(ele);
+						// console.log(ele.innerHTML);
+						console.log($(ele).text());
+
+						$(ele).css('color', arrColor[i]);
+					});
+				});
+			});
+		</script>
+
+	</head>
+	<body>
+		<ul>
+			<li>列表1</li>
+			<li>列表2</li>
+			<li class="intro">列表3</li>
+			<li>列表4</li>
+			<li>列表5</li>
+			<li>列表6</li>
+		</ul>
+		<button>点击我</button>
+	</body>
+</html>

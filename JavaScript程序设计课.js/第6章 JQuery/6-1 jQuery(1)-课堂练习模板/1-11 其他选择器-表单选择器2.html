@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript" src="./js/jquery-3.5.1.min.js"></script>
+		<script type="text/javascript"> 
+			$(function(){
+				// $('input').css('background-color','red');
+				// $('input').css('width','80px');
+				// $('input').css('height','40px');
+				
+				
+				//$(':input').css('background-color','red');
+				//$(':input').css('width','80px');
+				//$(':input').css('height','40px');
+				
+				$(':text').css('background-color','red');
+				$(':password').css('background-color','blue');
+				
+				$('textarea').css('background-color','green');
+				// $('textarea').css({backgroundColor:'#ccc'});
+				$('button').css('color','red')
+				
+			})
+		</script>
+		
+	</head>
+	<body>
+		文本框1：<input type="text"><br/>
+		文本框2：<input type="text"><br/>
+		密码框：<input type="password"><br/>
+		单选按钮：<input type="radio" name="sex">男&nbsp;<input type="radio" name="sex">女<br/>
+		多选按钮：<input type="checkbox" name="level">高&nbsp;<input type="checkbox" name="level">中&nbsp;<input type="checkbox" name="level">低<br/>
+		多行文本框：<textarea cols="20" rows="5"></textarea><hr/>
+		<button>点击</button>
+	</body>
+</html>
